@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="it">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Single Page Portfolio</title>
+    <meta name="description" content="Single Page Portfolio">
+    <meta name="author" content="Marco Berdin">
+    <meta name="copyrigth" content="Marco Berdin Enterprise - 2020">
+    <meta name="keywords" content="html, css">
+    <link rel="icon" href="img/favicon.png" type="img/png">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+      $('document').ready(function(){
+        
+        //codice definitivo slide menu
+        $('.main li').hover(function(){ $(this).contents('.sub').toggleClass('menu_visible');
+
+        })
+        /*$('.about_menu').click(function(event){
+        $('.interno_nav ul ul').slideToggle();
+        event.preventDefault();
+      })
+      $('.work_menu').click(function(event){
+        $('.interno_nav ul ul').slideToggle();
+        event.preventDefault();
+      })*/
+
+
+        $('#slide').hover(function(event){
+          $('h1').css('color', '#FFFF00');
+        }, function(){
+          $('h1').css('color', '#fff');
+        });
+        
+        
+        //codice definitivo cambio p
+        $('.scopri').click(function(event){
+          $(this).prev('p').html('<p>Quam culpa debitis laudantium<br> sint consequuntur incidunt.<br> Ea dignissimos ex numquam,</p>');
+          event.preventDefault();
+        })
+
+
+
+
+        /*$('.brand').click(function(event){
+          $('.br p').html('<p>Quam culpa debitis laudantium<br> sint consequuntur incidunt.<br> Ea dignissimos ex numquam,</p>');
+          event.preventDefault();
+        });
+        $('.design').click(function(event){
+          $('.dsg p').html('<p>Quam culpa debitis laudantium<br> sint consequuntur incidunt.<br> Ea dignissimos ex numquam,</p>');
+          event.preventDefault();
+        });
+        $('.dev').click(function(event){
+          $('.dv p').html('<p>Quam culpa debitis laudantium<br> sint consequuntur incidunt.<br> Ea dignissimos ex numquam,</p>');
+          event.preventDefault();
+        });
+        $('.rocket').click(function(event){
+          $('.rk p').html('<p>Quam culpa debitis laudantium<br> sint consequuntur incidunt.<br> Ea dignissimos ex numquam,</p>');
+          event.preventDefault();
+        });
+        */
+
+
+
+
+
+
+      })
+
+    </script>
+    <script src="https://kit.fontawesome.com/23f094b93c.js" crossorigin="anonymous">
+    </script>
+
+  </head>
+  <body>
+    <header>
+      <div class="contenitore">
+        <div class="yourlogo">
+          <p>Your Logo</p>
+        </div>
+        <nav>
+          <div class="interno_nav">
+            <ul class="main">
+              <li><a class="drop_down home_menu" href="#">home</a>
+              </li>
+              <li><a class="drop_down about_menu" href="#">about <span><i class="fas fa-chevron-down"></i></span></a>
+                <ul class="sub">
+                  <li><a class="sottomenu" href="#services" title="sottomenu1">Services</a></li>
+                  <li><a class="sottomenu" href="#team" title="sottomenu1">Team</a></li>
+                  <li><a class="sottomenu" href="#" title="sottomenu1">Skills</a></li>
+                </ul>
+              </li>
+              <li><a class="drop_down work_menu" href="#">work<span><i class="fas fa-chevron-down"></i></span></a>
+                <ul class="sub">
+                  <li><a class="sottomenu" href="#" title="sottomenu1">Web</a></li>
+                  <li><a class="sottomenu" href="#" title="sottomenu1">Apps</a></li>
+                  <li><a class="sottomenu" href="#" title="sottomenu1">Icon</a></li>
+                </ul>
+              </li>
+              <li><a class="drop_down blog_menu" href="#">blog</a></li>
+              <li><a class="drop_down contact_menu" href="#">contact<span><i class="fas fa-chevron-down"></i></span></a>
+              <ul class="sub">
+                  <li><a class="sottomenu social" href="#" title="sottomenu1"><i class="fab fa-whatsapp"></i></a></li>
+                  <li><a class="sottomenu social" href="#" title="sottomenu1"><i class="fab fa-instagram"></i></a></li>
+                  <li><a class="sottomenu social" href="#" title="sottomenu1"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a class="sottomenu social" href="#" title="sottomenu1"><i class="far fa-envelope"></i></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+    </header>
+    <div id="slide">
+      <div class="contenitore">
+        <a href="#" title="Hi!">
+          <h1>Hi there! We are the new kids on the block <br>
+            and we build awesome websites and mobile apps.</h1>
+        </a>
+      </div>
+    </div>
+    <section id="services">
+      <div class="contenitore clearfix">
+        <h2>SERVICES WE PROVIDE</h2>
+        <p class="text_under_title">We are working with both individuals and businesses from all over the globe <br>
+          to create awesome websites and applications.
+        </p>
+        <div class="services__riquadro">
+          <figure class="services__riquadro--image">
+            <img class="icona" src="img/Flag%20icon.png" alt="Icona Bandiera" width="119" height="124" >
+          </figure>
+          <div class="services__riquadro--text br">
+            <h3>Branding</h3>
+            <p>Lorem ipsum dolor sit amet,<br> 
+              consectetuer adipiscing elit,<br> sed diam nonummy nibh.</p>
+              <a class="scopri brand" href="#" data-scopri="scopri_branding" >Scopri di Più</a>
+          </div>
+          
+        </div>
+        <div class="services__riquadro">
+          <figure class="services__riquadro--image">
+            <img class="icona" src="img/Crayon%20icon.png" alt="Icona Bandiera" width="88" height="130" >
+          </figure>
+          <div class="services__riquadro--text dsg">
+            <h3>Design</h3>
+            <p>Lorem ipsum dolor sit amet,<br> 
+              consectetuer adipiscing elit,<br> sed diam nonummy nibh.</p>
+              <a class="scopri design" href="#" data-scopri="scopri_design">Scopri di Più</a>
+          </div>
+          
+        </div>
+        <div class="services__riquadro">
+          <figure class="services__riquadro--image">
+            <img class="icona" src="img/Gears%20icon.png" alt="Icona Bandiera" width="156" height="126" >
+          </figure>
+          <div class="services__riquadro--text dv">
+            <h3>development</h3>
+            <p>Lorem ipsum dolor sit amet,<br> 
+              consectetuer adipiscing elit,<br> sed diam nonummy nibh.</p>
+              <a class="scopri dev" href="#" data-scopri="scopri_develop">Scopri di Più</a>
+          </div>
+          
+        </div>
+        <div class="services__riquadro">
+          <figure class="services__riquadro--image">
+            <img class="icona" src="img/Rocket%20icon.png" alt="Icona Bandiera" width="94" height="132" >
+          </figure>
+          <div class="services__riquadro--text rk">
+            <h3>rocket science</h3>
+            <p>Lorem ipsum dolor sit amet,<br> 
+              consectetuer adipiscing elit,<br> sed diam nonummy nibh.</p>
+              <a class="scopri rocket" href="#" data-scopri="scopri_rocket">Scopri di Più</a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <section id="team">
+      <div class="contenitore clearfix">
+        <h2>MEET OUR BEAUTIFUL TEAM</h2>
+        <p class="text_under_title">We are a small team of designers and developers, who help brands with big ideas.
+        </p>
+        <div class="staff__riquadro">
+          <figure class="staff__riquadro--image">
+            <img class="identity" src="img/gnocca1.png" alt="ANNE HATHAWAY" width="200" height="200" >
+          </figure>
+          <div class="staff__riquadro--text">
+            <h3>ANNE HATHAWAY</h3>
+            <span>CEO / Marketing Guru</span>
+            <p>Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit, <br>sed diam nonummy nibh <br> euismod tincidunt ut laoreet   <br> dolore magna.
+          </div>
+          <div class="staff__riquadro--social">
+            <a class="cerchio_social" href="#" title="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="cerchio_social" href="#" title="twitter"><i class="fab fa-twitter"></i></a>
+            <a class="cerchio_social" href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a class="cerchio_social" href="#" title="mail"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+
+        <div class="staff__riquadro">
+          <figure class="staff__riquadro--image">
+            <img class="identity" src="img/gnocca2.png" alt="Kate Upton" width="200" height="200" >
+          </figure>
+          <div class="staff__riquadro--text">
+            <h3>Kate Upton</h3>
+            <span>Creative Director</span>
+            <p>Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit, <br>sed diam nonummy nibh <br> euismod tincidunt ut laoreet   <br> dolore magna.
+          </div>
+          <div class="staff__riquadro--social three">
+            <a class="cerchio_social" href="#" title="twitter"><i class="fab fa-twitter"></i></a>
+            <a class="cerchio_social" href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a class="cerchio_social" href="#" title="mail"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="staff__riquadro">
+          <figure class="staff__riquadro--image">
+            <img class="identity" src="img/gnocca3.png" alt="Olivia Wilde" width="200" height="200" >
+          </figure>
+          <div class="staff__riquadro--text">
+            <h3>Olivia Wilde</h3>
+            <span>Lead Designer</span>
+            <p>Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit, <br>sed diam nonummy nibh <br> euismod tincidunt ut laoreet   <br> dolore magna.
+          </div>
+          <div class="staff__riquadro--social">
+            <a class="cerchio_social" href="#" title="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="cerchio_social" href="#" title="twitter"><i class="fab fa-twitter"></i></a>
+            <a class="cerchio_social" href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a class="cerchio_social" href="#" title="mail"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="staff__riquadro">
+          <figure class="staff__riquadro--image">
+            <img class="identity" src="img/gnocca4.png" alt="Olivia Wilde" width="200" height="200">
+          </figure>
+          <div class="staff__riquadro--text ">
+            <h3>Ashley Greene</h3>
+            <span>SEO / Developer</span>
+            <p>Lorem ipsum dolor sit amet,<br>consectetuer adipiscing elit, <br>sed diam nonummy nibh <br> euismod tincidunt ut laoreet   <br> dolore magna.
+          </div>
+          <div class="staff__riquadro--social three">
+            <a class="cerchio_social" href="#" title="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="cerchio_social" href="#" title="twitter"><i class="fab fa-twitter"></i></a>
+
+            <a class="cerchio_social" href="#" title="mail"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skill" class="clearfix">
+      <div class="contenitore ">
+        <h2>WE GOT SKILLS!</h2>
+        <p class="text_under_title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br>
+          tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div class="skill__riquadro clearfix">
+          <figure class="skill__riquadro--image wd clearfix">
+            <div class="number ninety">
+              <p class="percent">%</p>
+            </div>
+          </figure>
+          <div class="skill__riquadro--text clearfix">
+            <h3>web design</h3>
+          </div>
+
+
+        </div>
+        <div class="skill__riquadro clearfix">
+          <figure class="skill__riquadro--image html_css clearfix">
+            <div class="number seventyfive">
+              <p class="percent">%</p>
+            </div>
+          </figure>
+          <div class="skill__riquadro--text clearfix">
+            <h3>html/css</h3>
+          </div>
+        </div>
+
+        <div class="skill__riquadro">
+          <figure class="skill__riquadro--image graph clearfix">
+            <div class="number seventy">
+              <p class="percent">%</p>
+            </div>
+          </figure>
+          <div class="skill__riquadro--text clearfix">
+            <h3>graphic design</h3>
+          </div>
+        </div>
+
+        <div class="skill__riquadro">
+          <figure class="skill__riquadro--image ux clearfix">
+            <div class="number eightyfive">
+              <p class="percent">%</p>
+            </div>
+          </figure>
+          <div class="skill__riquadro--text clearfix">
+            <h3>ui/ux</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio clearfix">
+      <div class="contenitore clearfix">
+        <h2>OUR PORTFOLIO</h2>
+        <p class="text_under_title">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet <br>
+          consectetur, adipisci velit, sed quia non numquam
+        </p>
+        <ul class="portfolio__ul">
+          <li><a href="#" title="All">all</a></li>
+          <li><a href="#" title="All">web</a></li>
+          <li><a href="#" title="All">aps</a></li>
+          <li><a href="#" title="All">icon</a></li>  
+        </ul>
+        <div class="portfolio__riquadro">
+          <figure class="portfolio__riquadro--image">
+            <div class="ombra left"></div>
+            <a class="portfolio__riquadro--ancora" href="#" title="Isometric Perspective Mock-Up">
+              <img src="img/1.png" alt="isometric pc" width="540" height="311">
+            </a>
+          </figure>
+          <figure class="portfolio__riquadro--image">
+            <div class="ombra"></div>
+            <a class="portfolio__riquadro--ancora" href="#" title="Time Zone App UI">
+              <img src="img/2.png" alt="isometric pc" width="540" height="311">
+            </a>
+          </figure>
+          <figure class="portfolio__riquadro--image">
+            <div class="ombra left"></div>
+            <a class="portfolio__riquadro--ancora" href="#" title="Viro Media Players UI">
+              <img src="img/3.png" alt="isometric pc" width="540" height="311">
+            </a>
+          </figure>
+          <figure class="portfolio__riquadro--image">
+            <div class="ombra"></div>
+            <a class="portfolio__riquadro--ancora" href="#" title="Blog / Magazine Flat UI Kit">
+              <img src="img/4.png"  alt="isometric pc" width="540" height="311">
+            </a>
+          </figure>
+        </div>
+      </div>
+      <a class="portfolio__ancora" href="#" title="LOAD MORE PROJECTS">LOAD MORE PROJECTS</a>
+
+    </section>
+    <section class="feedback">
+      <div class="contenitore clearfix">
+        <h2>WHAT PEOPLE SAY ABOUT US!</h2>
+        <p class="text_under_title">Our clients love us!
+        </p>
+        <article class="feedback__riquadro">
+          <figure class="feedback__riquadro--image">
+            <img src="img/gnocca5.png" alt="Chanel Iman" width="100" height="100">
+          </figure>
+          <div class="feedback__riquadro--text">
+            <p>
+              “Nullam dapibus blandit orci, viverra <br> gravida dui lobortis eget. Maecenas <br>fringilla urna eu nisl scelerisque.”<br>
+              <span class="name">Chanel Iman
+              </span><br>
+              <span class="competenze">CEO of Pinterest
+              </span>
+            </p>
+          </div>
+        </article>
+        <article class="feedback__riquadro">
+          <figure class="feedback__riquadro--image">
+            <img src="img/gnocca7.png" alt="Adriana Lima" width="100" height="100">
+          </figure>
+          <div class="feedback__riquadro--text">
+            <p>
+              “Nullam dapibus blandit orci, viverra <br> gravida dui lobortis eget. Maecenas <br>fringilla urna eu nisl scelerisque.”<br>
+              <span class="name">Adriana Lima
+              </span><br>
+              <span class="competenze">Founder of Instagram
+              </span>
+            </p>
+          </div>
+        </article>
+        <article class="feedback__riquadro">
+          <figure class="feedback__riquadro--image">
+            <img src="img/gnocca1.png" alt="ANNE HATHAWAY" width="100" height="100">
+          </figure>
+          <div class="feedback__riquadro--text">
+            <p>
+              “Nullam dapibus blandit orci, viverra <br> gravida dui lobortis eget. Maecenas <br>fringilla urna eu nisl scelerisque.”<br>
+              <span class="name">ANNE HATHAWAY
+              </span><br>
+              <span class="competenze">Lead Designer at Behance
+              </span>
+            </p>
+          </div>
+        </article>
+        <article class="feedback__riquadro">
+          <figure class="feedback__riquadro--image">
+            <img src="img/gnocca6.png" alt="Emma Stone" width="100" height="100">
+          </figure>
+          <div class="feedback__riquadro--text ">
+            <p>
+              “Nullam dapibus blandit orci, viverra <br> gravida dui lobortis eget. Maecenas <br>fringilla urna eu nisl scelerisque.”<br>
+              <span class="name">Emma Stone
+              </span><br>
+              <span class="competenze">Co-Founder of Shazam
+              </span>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="newsletter">
+      <div class="contenitore clearfix">
+        <h2>GET IN TOUCH</h2>
+        <p class="text_under_title">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. Tel: (202) 456-1111
+        </p>
+        <form action="inviodati.php" method="post">
+          <p class="newsletter__form">
+            <input class="prima_linea_form"  type="text" name="Nome_for" placeholder="Your Name">
+            <input class="prima_linea_form" type="email" name="email_for" placeholder="Your Email"><br>
+            <textarea name="yourmessage_for" id="Message" placeholder="Your Message" cols="30" rows="15"></textarea><br>
+            <input type="submit" value="Send Message">
+          </p>
+        </form>
+      </div>
+    </section>
+    <footer class="clearfix">
+      <a href="#" title="dribbble"><i class="fab foot fa-dribbble"></i></a>
+      <a href="#" title="instagram"><i class="fab foot fa-instagram"></i></a>
+      <a href="#" title="Facebook"><i class="fab foot fa-facebook-f"></i></a>
+      <a href="#" title="tiktok"><i class="fab foot fa-tiktok"></i></a>
+      <a href="#" title="whatsapp"><i class="fab foot fa-whatsapp"></i></a>
+      <a href="#" title="behance"><i class="fab foot fa-behance"></i></a>
+      <a href="#" title="github"><i class="fab foot fa-github"></i></a>
+    </footer>
+  </body>
+</html>
