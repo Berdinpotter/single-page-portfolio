@@ -1,3 +1,3 @@
-# single-page-portfolio
+# Single Page Portfolio exercise
 
 elimiato il file .DS_Store
